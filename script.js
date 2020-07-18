@@ -96,11 +96,12 @@ const bicast__data = {
 			var col = parseInt(in_col.value)
 			if (row > 0 && col > 0) {
 				bicast__data.table.innerHTML = ''
+				const device = bicast__data.device === 'dev_lap' ? 'demo_laptop' : 'demo_mobile'
 				for (var i = 0; i < row; i++) {
 					const tr = document.createElement('tr')
 					for (var j = 0; j < col; j++) {
 						const td = document.createElement('td')
-						td.innerHTML = `<div class="demo_device demo_mobile"><div class="demo_content"></div><div class="device_ring"><svg class="mob_svg" style="width:24px;height:24px;display:none" viewBox="0 0 24 24"><path fill="#ffffff" d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z"/></svg><svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#ffffff" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg><svg class="mob_svg" style="width:24px;height:24px;display:none" viewBox="0 0 24 24"><path fill="#ffffff" d="M18,18H6V6H18M18,4H6A2,2 0 0,0 4,6V18A2,2 0 0,0 6,20H18A2,2 0 0,0 20,18V6C20,4.89 19.1,4 18,4Z"/></svg></div></div>`
+						td.innerHTML = `<div class="demo_device ${device}"><div class="demo_content"></div><div class="device_ring"><svg class="mob_svg" style="width:24px;height:24px;display:none" viewBox="0 0 24 24"><path fill="#ffffff" d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z"/></svg><svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#ffffff" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg><svg class="mob_svg" style="width:24px;height:24px;display:none" viewBox="0 0 24 24"><path fill="#ffffff" d="M18,18H6V6H18M18,4H6A2,2 0 0,0 4,6V18A2,2 0 0,0 6,20H18A2,2 0 0,0 20,18V6C20,4.89 19.1,4 18,4Z"/></svg></div></div>`
 						tr.appendChild(td)
 					}
 					bicast__data.table.appendChild(tr)
