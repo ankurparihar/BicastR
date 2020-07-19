@@ -142,6 +142,7 @@ const bicast__data = {
 				const dev_hei = dim.height, dev_wid = dim.width
 				const img = document.createElement('img')
 				img.src = bicast__data.imgSrc
+				img.alt = 'sample image'
 				div.innerHTML = ''
 				div.appendChild(img)
 				img.style.top = 0 - row * dev_hei + 'px'
@@ -296,8 +297,8 @@ const bicast__data = {
 		var x, y
 		const dim = elmnt.parentElement.getBoundingClientRect()
 		const dev_hei = dim.height, dev_wid = dim.width
-		elmnt.addEventListener('touchstart', dragTouchStart)
-		elmnt.addEventListener('touchmove', dragTouchMove)
+		elmnt.addEventListener('touchstart', dragTouchStart, { passive: true })
+		elmnt.addEventListener('touchmove', dragTouchMove, { passive: true })
 		document.addEventListener('touchend', () => { active = false })
 
 		function dragTouchStart(e) {
