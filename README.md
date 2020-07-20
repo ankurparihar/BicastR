@@ -1,3 +1,5 @@
+![BicastR demo image](./bicastr.png)
+
 ## BicastR<br/>
 
 > Split and view large media (image or video) on multiple displays <br>
