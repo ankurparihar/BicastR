@@ -45,3 +45,10 @@
 - UI design
 - Media continuity - Force identical media on all endpoints
 - Handling endpoints with multiple dimensions
+
+<hr>
+
+### PageSpeed score powered by [readme-pagespeed-insights](https://github.com/ankurparihar/readme-pagespeed-insights)
+<p align="center">
+	<img align="center" src="./pagespeed.svg" width="600px">
+</p>
